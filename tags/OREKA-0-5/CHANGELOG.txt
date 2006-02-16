@@ -1,0 +1,47 @@
+===========================================================================
+2006-02-15 Oreka 0.5
+
+	* Fixed a critical bug that could cause Orkaudio to crash given a certain sequence of RTP packets
+
+===========================================================================
+2006-02-12 Oreka 0.4
+
+	* Oreka can now monitor multiple Network devices in parallel
+	* Oreka can now replay tcpdump (pcap) network trace files
+	* Improved RTP detection (Before: some RTP streams could go undetected)
+	* Improved Cisco Skinny signalling management (Before: Sessions could break up spuriously and single session could be seen as two separate sessions)
+	* Improved SIP detection (Before: SIP messages on some platforms went undetected)
+	* Improved SIP signalling management (Before: Sessions could break up spuriously)
+	* Oreka can now store in "pcmwav" format, ie, pcm stored in a wav file without compression
+	* Sample rate can now be different than 8KHz across Oreka
+	* Sample rate now tunable in SoundDevice plugin
+	* Codecs can now be plugins
+
+===========================================================================
+2005-11-22 Oreka 0.3
+
+	* Windows installer now available
+	* "make install" target now works under linux
+	* Debian/Ubuntu binary package now available
+	* Audio output location can now be configured (<AudioOutputPath> tag in config.xml)
+	* orkaudio now daemonizes by default under linux
+	* Fixed bug where Skinny session could go undetected 
+	* Fixed bug where NT service sometimes crashed when stopped by the user
+
+===========================================================================
+2005-11-02 Oreka 0.2
+
+	* VoIp plugin now supports Cisco skinny (aka SCCP) protocol (including metadata extraction)
+	* VoIp plugin now supports Raw RTP sessions recording.
+	* VoIP plugin now tries to associate a SIP call to a capture port that is made of the 
+	actual local SIP agent (phone) IP address and TCP port. Before that, a capture port 
+	could be made of a gateway or external IP address and TCP port.
+	* Default to the last OS returned network device when config file does not specify or
+	  specifies invalid network device
+	* Visual studio project now opens without errors
+	* Fixed win32 crash when network device identifier in config file was invalid
+	  
+	  
+===========================================================================
+2005-10-20 Oreka 0.1 - Initial release
+
