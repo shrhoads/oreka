@@ -1,0 +1,50 @@
+<table width="100%" class="paging">
+	<tr>
+		<td align="center">
+			<table>
+				<tr>
+					<td>
+						<a jwcid="@DirectLink" listener="ognl:listeners.firstPageAction">
+							<img jwcid="@Image" image="asset:first" alt="First"/>
+						</a>
+					</td>
+					<td>
+						<a jwcid="@DirectLink" listener="ognl:listeners.previousPageAction">
+							<img jwcid="@Image" image="asset:previous" alt="First"/>
+						</a>
+					</td>
+					<td>
+						<a jwcid="@DirectLink" listener="ognl:listeners.nextPageAction">
+							<img jwcid="@Image" image="asset:next" alt="First"/>
+						</a>
+					</td>
+					<td>
+						<a jwcid="@DirectLink" listener="ognl:listeners.lastPageAction">
+							<img jwcid="@Image" image="asset:last" alt="First"/>
+						</a>
+					</td>
+					<td nowrap="true">
+						Page <span jwcid="@Insert" value="ognl:tableState.currentPage"/>/<span jwcid="@Insert" value="ognl:tableState.numPages"/>
+					</td>	
+					<td nowrap="true">
+						<span jwcid="@Insert" value="ognl:tableState.numResults"/> Results
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!--*** Slider ***-->
+	<tr>
+		<td>
+			<table width="100%">
+				<tr>
+					<td jwcid="@Foreach" source="ognl:sliderPositions" value="ognl:sliderPosition" element="td" class="ognl:tableState.sliderPosition == sliderPosition ? 'cursor' : 'bar'">
+						<a jwcid="@DirectLink" listener="ognl:listeners.sliderClickAction" parameters="ognl:sliderPosition">
+							<div style="width: 100%">&nbsp;</div>
+						</a>
+					</td>
+				</tr>
+			</table>
+		</td>	
+	</tr>
+</table>
