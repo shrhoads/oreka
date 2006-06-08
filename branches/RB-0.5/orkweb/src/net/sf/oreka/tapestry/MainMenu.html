@@ -1,0 +1,38 @@
+<!-- *** Main Menu *** -->
+<link jwcid="@If" condition="false" href="orekastyle.css" rel="stylesheet" type="text/css"/>
+<table width="100" border="0" cellpadding="0" cellspacing="0" class="menu">
+	<tr>
+		<td width="20" valign="top"><img src="images/common/bg_header_03.jpg" width="20" height="35"></td>
+		<td align="left" id="menu">
+			<table class="menubuttons">
+				<tr>
+					<td jwcid="@Any" class="ognl:pageName=='Home'? 'on' : ''">
+						<a jwcid="@PageLink" page="Home">
+							<span key="Home">Home</span>
+						</a>
+					</td>
+					<td jwcid="@Any" class="ognl:pageName=='RecSegments'? 'on' : ''">
+						<a jwcid="@PageLink" page="RecSegments">
+							<span key="RecSegments">Calls</span>
+						</a>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td align="right" id="menu">
+			<table class="menubuttons">
+				<tr>
+					<td>
+						<a jwcid="@PageLink" page="Account">
+							<span key="Account">Account</span>
+						</a>					
+					</td>
+					<td>
+						<span jwcid="@ServiceLink" service="ognl:@org.apache.tapestry.Tapestry@RESTART_SERVICE">Logout</span>
+					</td>
+				</tr>
+			</table>	
+		</td>
+		<td width="15" valign="top"><img src="images/common/bg_header_06.jpg" width="15" height="35"></td>
+	</tr>
+</table>
